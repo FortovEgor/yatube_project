@@ -19,7 +19,7 @@ from django.urls import include, path
 
 urlpatterns = [
     # импорт правил из приложения posts
-    path('', include('posts.urls')),  
+    path('', include('posts.urls', namespace='posts')),  
     # т е при любом запросе кроме admin запрос будет обрабатываться 
     # в файле urls.py в приложении posts
     path('admin/', admin.site.urls),
