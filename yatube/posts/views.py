@@ -14,10 +14,30 @@ def index(request):
     #                     '<b>ответы</b>,<br> если у тебя нет правильных '
     #                     '<s>вопросов</s> запросов.')
     template = 'posts/index.html'
-    return render(request, template)
+    context = {
+        'title': 'Это главная страница проекта Yatube'
+    }
+    return render(request, template, context)
+
+
+# Страница group_list
+def group_list(request):
+    # return HttpResponse('Ты <i>не можешь</i> получить правильные '
+    #                     '<b>ответы</b>,<br> если у тебя нет правильных '
+    #                     '<s>вопросов</s> запросов.')
+    context = {
+        'title': 'Здесь будет информация о группах проекта Yatube'
+    }
+    template = 'posts/group_list.html'
+    return render(request, template, context)
 
 
 # Страница со списком мороженого
 # view-функция принимает параметр pk из path()
 def group_posts(request, slug):
-    return HttpResponse(f'переданный параметр: {slug}')
+    # return HttpResponse(f'переданный параметр: {slug}')
+    context = {
+        'title': 'Здесь будет информация о группах проекта Yatube'
+    }
+    template = 'posts/group_list.html'
+    return render(request, template, context)
