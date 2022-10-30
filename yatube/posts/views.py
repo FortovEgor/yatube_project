@@ -22,16 +22,18 @@ def index(request):
     return render(request, 'posts/index.html', context) 
 
 
+########################################################
 # Страница group_list
-def group_list(request):
-    # return HttpResponse('Ты <i>не можешь</i> получить правильные '
-    #                     '<b>ответы</b>,<br> если у тебя нет правильных '
-    #                     '<s>вопросов</s> запросов.')
-    context = {
-        'title': 'Здесь будет информация о группах проекта Yatube'
-    }
-    template = 'posts/group_list.html'
-    return render(request, template, context)
+# def group_list(request):
+#     # return HttpResponse('Ты <i>не можешь</i> получить правильные '
+#     #                     '<b>ответы</b>,<br> если у тебя нет правильных '
+#     #                     '<s>вопросов</s> запросов.')
+#     context = {
+#         'title': 'Здесь будет информация о группах проекта Yatube'
+#     }
+#     template = 'posts/group_list.html'
+#     return render(request, template, context)
+########################################################
 
 
 # Страница со списком мороженого
